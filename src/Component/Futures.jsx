@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 const Futures = ({future}) => {
-    console.log(future)
+
     const{companyLogo,companyName,educationalRequirements,email,experiences,id,jobDescription,jobResponsibility,jobTitle,location,phone,salary,workPlace,workTime}=future
     return (
         <div className='border p-6 rounded '>
@@ -24,7 +25,7 @@ const Futures = ({future}) => {
                 <p>{salary}</p>
             </div>
            </div>
-           <button className='bg-blue-500 px-4 py-2 rounded text-white font-bold'>View Details</button>
+          <Link to={`/${id}`}> <button className='bg-blue-500 px-4 py-2 rounded text-white font-bold'>View Details</button></Link>
         </div>
     );
 };
