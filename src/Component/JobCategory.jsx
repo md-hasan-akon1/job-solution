@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Future = ({futureData}) => {
-    console.log(futureData)
-    const{category,availableJob,logo}=futureData
+const JobCategory = ({Category}) => {
+    const{category,availableJob,logo}=Category;
     return (
         <div className='border-2 p-4 rounded text-center bg-slate-100 ' >
             <img className='h-16 mx-auto mb-4 rounded' src={logo} alt="" />
@@ -12,4 +11,4 @@ const Future = ({futureData}) => {
     );
 };
 
-export default Future;
+export default JobCategory;

@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Future from './Future';
+import JobCategory from './JobCategory';
+
 
 
 const Home = () => {
-    const futuresData= useLoaderData()
     
+    const [Category,setCategory]=useState([])
+    useEffect(()=>{
+        fetch('jobCategory.json')
+        .then(res=>res.json())
+        .then(data=>setCategory(data))
+    },[])
+
     return (
         <div >
             <section className='bg-gray-100 p-2 rounded flex flex-col-reverse md:flex-row lg:justify-between items-center mt-8'>
@@ -20,6 +27,7 @@ const Home = () => {
                     <img className='rounded' src="../../public/img/job-man.jpg" alt="" />
                 </div>
             </section>
+            {/* job category future */}
             <section className='mt-20'>
 
                 <div className='text-center'>
@@ -29,14 +37,17 @@ const Home = () => {
 
                 <div className='grid  grid-cols-2 lg:grid-cols-4 h-full justify-center gap-4  '>
                     {
-                     futuresData.map(futureData=><Future
-                     key={futureData.id}
-                     futureData={futureData}
-                     ></Future>)   
+                        Category.map(Category =><JobCategory
+                        key={Category.id}
+                        Category={Category}
+                        ></JobCategory>)
                     }
                 </div>
             </section>
+            {/* future */}
+            <section>
 
+            </section>
         </div>
     );
 };
