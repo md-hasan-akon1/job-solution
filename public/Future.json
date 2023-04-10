@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "companyLogo": "https://example.com/company1-logo.png",
+      "companyLogo": "../public/img/microsoft.png",
       "jobTitle": "Software Developer",
       "companyName": "Microsoft Corporation ",
       "workPlace": "Remote",
@@ -18,7 +18,7 @@
     },
     {
       "id": 2,
-      "companyLogo": "https://example.com/company2-logo.png",
+      "companyLogo": "../public/img/IBM-Logo.jpg",
       "jobTitle": "Network Administrator",
       "companyName": "IBM Company",
       "workPlace": "Onsite",
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "companyLogo": "https://example.com/company3-logo.png",
+      "companyLogo": "../public/img/Accenture-logo.jpg",
       "jobTitle": "Data Analyst",
       "companyName": "Accenture company",
       "workPlace": "Remote",
@@ -53,7 +53,7 @@
     },
     {
       "id": 4,
-      "companyLogo": "https://example.com/company4-logo.png",
+      "companyLogo": "../public/img/oracle.png",
       "jobTitle": "Cybersecurity Analyst",
       "companyName": "Oracle Company ",
       "workPlace": "Onsite",
@@ -70,12 +70,12 @@
     },
    {
         "id": 5,
-        "companyLogo": "https://example.com/logo.png",
+        "companyLogo": "../public/img/YouTube-Logo.png",
         "jobTitle": "Software Engineer",
         "companyName": "YouTube",
-        "workingPlace": "Remote",
+        "workPlace": "Remote",
         "location": "New York, NY",
-        "fulltimeOrPartTime": "Full-time",
+        "workTime": "Full-time",
         "salary": "$100,000 - $120,000",
         "jobDescription": "We are seeking a talented Software Engineer to join our team...",
         "jobResponsibility": "Design and develop software applications...",
@@ -87,12 +87,12 @@
       },
       {
         "id": 6,
-        "companyLogo": "https://example.com/logo.png",
+        "companyLogo": "../public/img/google.jpg",
         "jobTitle": "Frontend Developer",
         "companyName": "Google",
-        "workingPlace": "Onsite",
+        "workPlace": "Onsite",
         "location": "San Francisco, CA",
-        "fulltimeOrPartTime": "Full-time",
+        "workTime": "Full-time",
         "salary": "$90,000 - $110,000",
         "jobDescription": "We are looking for a skilled Frontend Developer to join our team...",
         "jobResponsibility": "Develop and maintain responsive and user-friendly web interfaces...",

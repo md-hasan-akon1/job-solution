@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import JobCategory from './JobCategory';
+import Futures from './Futures';
 
 
 
 const Home = () => {
-    
-    const [Category,setCategory]=useState([])
-    useEffect(()=>{
-        fetch('jobCategory.json')
-        .then(res=>res.json())
-        .then(data=>setCategory(data))
-    },[])
 
+    const [Category, setCategory] = useState([])
+    const [Future, setFuture] = useState([])
+
+    useEffect(() => {
+        fetch('jobCategory.json')
+            .then(res => res.json())
+            .then(data => setCategory(data))
+    }, [])
+
+    useEffect(() => {
+        fetch('Future.json')
+            .then(res => res.json())
+            .then(data => setFuture(data))
+    }, [])
     return (
         <div >
             <section className='bg-gray-100 p-2 rounded flex flex-col-reverse md:flex-row lg:justify-between items-center mt-8'>
@@ -27,7 +35,7 @@ const Home = () => {
                     <img className='rounded' src="../../public/img/job-man.jpg" alt="" />
                 </div>
             </section>
-            {/* job category future */}
+            {/* job category */}
             <section className='mt-20'>
 
                 <div className='text-center'>
@@ -37,16 +45,28 @@ const Home = () => {
 
                 <div className='grid  grid-cols-2 lg:grid-cols-4 h-full justify-center gap-4  '>
                     {
-                        Category.map(Category =><JobCategory
-                        key={Category.id}
-                        Category={Category}
+                        Category.map(Category => <JobCategory
+                            key={Category.id}
+                            Category={Category}
                         ></JobCategory>)
                     }
                 </div>
             </section>
-            {/* future */}
+            {/* job future */}
             <section>
 
+                <div className='text-center mt-16'>
+                    <h1 className='font-bold text-3xl'>Featured Jobs</h1>
+                    <p className='my-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                </div>
+                <div  className='grid lg:grid-cols-2 gap-4 mt-4'>
+                {
+                    Future.map(future=><Futures
+                    key={future.id}
+                    future={future}
+                     ></Futures>)
+                }
+                </div>
             </section>
         </div>
     );
