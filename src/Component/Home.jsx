@@ -24,10 +24,10 @@ const Home = () => {
 
                 <div className='text-center'>
                     <h1 className='font-bold text-3xl mb-3'>Job Category List</h1>
-                    <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                    <p className='mb-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
 
-                <div>
+                <div className='grid  grid-cols-2 lg:grid-cols-4 h-full justify-center gap-4  '>
                     {
                      futuresData.map(futureData=><Future
                      key={futureData.id}
