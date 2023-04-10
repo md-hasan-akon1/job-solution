@@ -17,8 +17,6 @@ const Header = () => {
                             open===true?< XMarkIcon className="h-6 w-6 absolute top-6 text-blue-500 left-[90%]" />: < Bars3Icon className="h-6 w-6 absolute text-blue-500 left-[90%] top-6 " />
                         }
                     </span>
-               
-                
                 </div>
                 <div className={` bg-slate-400 px-2 rounded flex flex-col absolute left-[79%] md:flex-row py-2 md:left-[35%] md:gap-8  duration-200 ${open?'top-16 md:top-4':'-top-48 md:top-6' }`}>
                     <Link className='font-bold' to='/'>Home</Link>
