@@ -23,7 +23,7 @@ const Header = () => {
                     <Link className='font-bold' to='/'>Home</Link>
                     <Link className='font-bold' to='Statistics'>Statistics</Link>
                     <Link className='font-bold' to='/appliedJob'>Applied Jobs</Link>
-                    <Link className='font-bold' to='/'>Blog</Link>
+                    <Link className='font-bold' to='/Blog'>Blog</Link>
                 </div>
             </nav>
 
