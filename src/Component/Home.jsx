@@ -9,7 +9,8 @@ const Home = () => {
 
     const [Category, setCategory] = useState([])
     const [Future, setFuture] = useState([])
-
+    const [open,setOpen] = useState(true)
+    console.log(open)
     useEffect(() => {
         fetch('jobCategory.json')
             .then(res => res.json())
@@ -19,8 +20,8 @@ const Home = () => {
     useEffect(() => {
         fetch('Future.json')
             .then(res => res.json())
-            .then(data => setFuture(data))
-    }, [])
+            .then(data =>setFuture(open?data.slice(0,4):data))
+    }, [open])
     return (
         <div >
             <section className='bg-gray-100 p-2 rounded flex flex-col-reverse md:flex-row lg:justify-between items-center mt-8'>
@@ -59,15 +60,20 @@ const Home = () => {
                     <h1 className='font-bold text-3xl'>Featured Jobs</h1>
                     <p className='my-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
-                <div  className='grid lg:grid-cols-2 gap-4 mt-4'>
-                {
-                    Future.map(future=><Futures
-                    key={future.id}
-                    future={future}
-                     ></Futures>)
-                }
+                <div className='grid lg:grid-cols-2 gap-4 mt-4'>
+                    {
+                       Future.map(future => <Futures
+                            key={future.id}
+                            future={future}
+                        ></Futures>)
+                    }
                 </div>
             </section>
+           <div className='w-full relative'>
+            <button className='bg-blue-500 px-4 py-2 absolute left-80 lg:left-[92%] top-3  rounded text-white font-bold' onClick={()=>setOpen(!open)}>{open?"Show All":"Show less"}</button>:
+         
+            </div>
+
         </div>
     );
 };
