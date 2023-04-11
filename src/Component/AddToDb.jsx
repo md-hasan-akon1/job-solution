@@ -6,7 +6,16 @@ const AddToDb=(id)=>{
     let shoppingCart=getShoppingCart()
     const quantity=shoppingCart[id];
     if(quantity){
-        toast("Wow so easy!");
+        toast.error('🦄 This Cart Is Already Added !', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
     else{
         shoppingCart[id]=1;
