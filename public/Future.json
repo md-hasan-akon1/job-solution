@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "companyLogo": "../public/img/microsoft.png",
+      "companyLogo": "https://i.ibb.co/9Yr1th2/microsoft.png",
       "jobTitle": "Software Developer",
       "companyName": "Microsoft Corporation ",
       "workPlace": "Remote",
@@ -18,7 +18,7 @@
     },
     {
       "id": 2,
-      "companyLogo": "../public/img/IBM-Logo.jpg",
+      "companyLogo": "https://i.ibb.co/CBmW255/IBM-Logo.jpg",
       "jobTitle": "Network Administrator",
       "companyName": "IBM Company",
       "workPlace": "Onsite",
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "companyLogo": "../public/img/Accenture-logo.jpg",
+      "companyLogo": "https://i.ibb.co/k5NBSMw/Accenture-logo.jpg",
       "jobTitle": "Data Analyst",
       "companyName": "Accenture company",
       "workPlace": "Remote",
@@ -53,7 +53,7 @@
     },
     {
       "id": 4,
-      "companyLogo": "../public/img/oracle.png",
+      "companyLogo": "https://i.ibb.co/5TX064D/oracle.png",
       "jobTitle": "Cybersecurity Analyst",
       "companyName": "Oracle Company ",
       "workPlace": "Onsite",
@@ -70,7 +70,7 @@
     },
    {
         "id": 5,
-        "companyLogo": "../public/img/YouTube-Logo.png",
+        "companyLogo": "https://i.ibb.co/whsz7p6/You-Tube-Logo.png",
         "jobTitle": "Software Engineer",
         "companyName": "YouTube",
         "workPlace": "Remote",
@@ -87,7 +87,7 @@
       },
       {
         "id": 6,
-        "companyLogo": "../public/img/google.jpg",
+        "companyLogo": "https://i.ibb.co/G3HfMmT/google.jpg",
         "jobTitle": "Frontend Developer",
         "companyName": "Google",
         "workPlace": "Onsite",

@@ -17,11 +17,11 @@ const Futures = ({future}) => {
            
            <div className='flex gap-8 my-4'>
             <div className='flex items-center'>
-                <img  className='h-8' src="../../public/img/location.png" alt="" />
+                <img  className='h-8' src="https://i.ibb.co/SvvfqgX/location.png" alt="" />
                 <p>{location}</p>
             </div>
             <div className='flex gap-2 items-center'>
-                <img className='h-8' src="../../public/img/dollar.png" alt="" />
+                <img className='h-8' src="https://i.ibb.co/rdSC6MH/dollar.png" alt="" />
                 <p>{salary}</p>
             </div>
            </div>

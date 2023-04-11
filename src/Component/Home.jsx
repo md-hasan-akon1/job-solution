@@ -32,7 +32,7 @@ const Home = () => {
                     <button className=' bg-blue-500 text-white font-bold px-4 py-2 rounded mt-8'>Get Started</button>
                 </div>
                 <div>
-                    <img className='rounded' src="../../public/img/job-man.jpg" alt="" />
+                    <img className='rounded' src="https://i.ibb.co/Qp2GtJ6/job-man.jpg" alt="" />
                 </div>
             </section>
             {/* job category */}
