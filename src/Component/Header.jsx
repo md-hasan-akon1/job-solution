@@ -21,7 +21,7 @@ const Header = () => {
                 </div>
                 <div className={` bg-slate-400 px-2 rounded flex flex-col absolute left-[79%] md:flex-row py-2 md:left-[35%] md:gap-8  duration-200 ${open?'top-16 md:top-4':'-top-48 md:top-6' }`}>
                     <Link className='font-bold' to='/'>Home</Link>
-                    <Link className='font-bold' to='/'>Statistics</Link>
+                    <Link className='font-bold' to='Statistics'>Statistics</Link>
                     <Link className='font-bold' to='/appliedJob'>Applied Jobs</Link>
                     <Link className='font-bold' to='/'>Blog</Link>
                 </div>
