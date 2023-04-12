@@ -19,4 +19,4 @@
  * jobDetail, job category and job details set job future 
  * Statistics file set a AreChart on my assignment 
  
- live link :[project live link]()
+ live link :[project live link](https://lively-seahorse-47ec08.netlify.app)
