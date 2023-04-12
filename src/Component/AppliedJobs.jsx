@@ -7,28 +7,45 @@ import AppliedCart from './AppliedCart';
 const AppliedJobs = () => {
     const allData = useLoaderData()
 
-    let data = []
-    const saveCart = getShoppingCart()
 
-    if (saveCart) {
-        for (const id in saveCart) {
-            const carts = allData.find(Data => Data.id == id)
-            data.push(carts)
+    const [CartData, setCartData] = useState([])
+    useEffect(() => {
+        const saveCart = getShoppingCart()
+
+        if (saveCart) {
+            let array = []
+            for (const id in saveCart) {
+                const carts = allData.find(Data => Data.id == id)
+                array.push(carts)
+            }
+            setCartData(array)
+        }
+    }, [])
+
+    const handelRemote = (Remote) => {
+        if (CartData) {
+
+
+            const RemoteData = CartData.filter(data => data.workPlace == Remote)
+            setCartData(RemoteData)
+            
+
         }
 
     }
-    const handelRemote = (Remote) => {
-        if(data){
-          
-        const RemoteData=data.filter(data=>data.workPlace==Remote)
-        RemoteData.map(remoteData=>console.log(remoteData))
-     
+
+
+    const handelOnsite = (onsite) => {
+        if (CartData) {
+
+
+            const onsiteData = CartData.filter(data => data.workPlace == onsite)
+            setCartData(onsiteData)
+            
+
+        }
+
     }
-
-}
-
-
-
 
     return (
         <div>
@@ -38,13 +55,13 @@ const AppliedJobs = () => {
                     <label tabIndex={0} className="btn m-1">filter</label>
                     <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a onClick={() => handelRemote('Remote')} >Remote</a></li>
-                        <li><a onClick={() => console.log('Onsite')} >Onside</a></li>
+                        <li><a onClick={() => handelOnsite('Onsite')} >Onside</a></li>
                     </ul>
                 </div>
             </div>
 
             <div> {
-                data.map(data => <AppliedCart
+                CartData.map(data => <AppliedCart
                     key={data.id}
                     data={data}
                 ></AppliedCart>)
