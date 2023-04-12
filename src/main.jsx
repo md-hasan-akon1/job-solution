@@ -11,16 +11,20 @@ import JobDetails from './Component/JobDetails';
 import AppliedJobs from './Component/AppliedJobs';
 import Statistics from './Component/Statistics';
 import Blog from './Component/Blog';
+import Error from './Component/Error';
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App></App>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: '/',
         element:<Home></Home>,
-        loader:()=>fetch('jobCategory.json')
+        loader:()=>fetch('jobCategory.json'),
+      
       },
+
       {
         path:'/:id',
         element:<JobDetails></JobDetails>,
@@ -38,10 +42,13 @@ const router = createBrowserRouter([
       {
         path:'/Blog',
         element:<Blog></Blog>
-      }
+      },
 
     ]
-  }
+  },
+
+
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

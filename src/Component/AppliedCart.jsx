@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AppliedCart = ({ data }) => {
-    console.log(data)
+
     const { companyLogo, companyName, jobTitle, location, salary, workPlace, workTime, id } = data;
     return (
         <div >

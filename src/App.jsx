@@ -4,6 +4,7 @@ import './App.css'
 import Header from './Component/Header'
 import { Outlet } from 'react-router-dom'
  import { ToastContainer } from 'react-toastify'
+import Footer from './Component/Footer'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <Header></Header>
     <ToastContainer></ToastContainer>
     <Outlet></Outlet>
+    <Footer></Footer>
       
     </div>
   )

@@ -70,7 +70,7 @@ const Home = () => {
                 </div>
             </section>
            <div className='w-full relative'>
-            <button className='bg-blue-500 px-4 py-2 absolute left-80 lg:left-[92%] top-3  rounded text-white font-bold' onClick={()=>setOpen(!open)}>{open?"Show All":"Show less"}</button>:
+            <button className='bg-blue-500 px-4 py-2 absolute left-80 lg:left-[91%] top-3  rounded text-white font-bold' onClick={()=>setOpen(!open)}>{open?"Show All":"Show Less"}</button>:
          
             </div>
 
