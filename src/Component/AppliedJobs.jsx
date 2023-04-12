@@ -23,25 +23,28 @@ const AppliedJobs = () => {
     }, [])
 
     const handelRemote = (Remote) => {
-        if (CartData) {
-
-
-            const RemoteData = CartData.filter(data => data.workPlace == Remote)
+        const saveCart = getShoppingCart()
+        if (saveCart) {
+            let array = [];
+            for (const id in saveCart) {
+                const carts = allData.find(Data => Data.id == id)
+                array.push(carts)
+            }
+            const RemoteData = array.filter(data => data.workPlace == Remote)
             setCartData(RemoteData)
-            
-
         }
-
     }
 
-
     const handelOnsite = (onsite) => {
-        if (CartData) {
-
-
-            const onsiteData = CartData.filter(data => data.workPlace == onsite)
+        const saveCart = getShoppingCart()
+        if (saveCart) {
+            let array = [];
+            for (const id in saveCart) {
+                const carts = allData.find(Data=>Data.id==id)
+                array.push(carts)
+            }
+            const onsiteData = array.filter(data => data.workPlace == onsite)
             setCartData(onsiteData)
-            
 
         }
 

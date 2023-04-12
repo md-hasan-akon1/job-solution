@@ -28,7 +28,9 @@ const Header = () => {
             </nav>
 
             <div>
-                <button className='absolute mt-3 left-[58%] md:left-[90%] bg-blue-600 px-4 py-2 rounded text-white font-semibold' >Applied job</button>
+               <Link to='/appliedJob'> 
+               <button className='absolute mt-3 left-[58%] md:left-[90%] bg-blue-600 px-4 py-2 rounded text-white font-semibold' >Applied job</button>
+               </Link>
             </div>
         </div>
     );
